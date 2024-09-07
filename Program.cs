@@ -22,8 +22,9 @@ builder.Services.AddSwaggerGen(options =>
     options.SwaggerDoc("v1", new OpenApiInfo() { Title = "API V1", Version = "v1" });
     options.SwaggerDoc("v2",new OpenApiInfo() { Version = "v2",Title= "API V2" });
     options.ResolveConflictingActions(e => e.First());
-    options.OperationFilter<RemoveVersionFromParameter>();
-    options.DocumentFilter<ReplaceVersionWithExactInPath>();
+
+    //options.OperationFilter<RemoveVersionFromParameter>();
+    //options.DocumentFilter<ReplaceVersionWithExactInPath>();
 
 
 
